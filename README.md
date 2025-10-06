@@ -11,6 +11,7 @@ A modern, responsive portfolio website showcasing iOS development skills and pub
 - **Skills Visualization**: Animated skill bars showing technical proficiency
 - **Contact Form**: Functional contact form that opens email client
 - **Performance Optimized**: Debounced scroll events and efficient animations
+- **Multilingual**: Korean/English language toggle functionality
 
 ## Projects Featured
 
@@ -30,7 +31,7 @@ A modern, responsive portfolio website showcasing iOS development skills and pub
 ## File Structure
 
 ```
-mbPortfollo-web/
+jennyMbPortfolioWeb/
 ├── index.html          # Main HTML file
 ├── styles.css          # CSS styles and animations
 ├── script.js           # JavaScript functionality
@@ -40,6 +41,7 @@ mbPortfollo-web/
     ├── faithLogLogo.png
     ├── daymojiLogo.png
     ├── cooktokLogo.png
+    ├── myImg.png       # Profile image
     └── ... (other project images)
 ```
 
