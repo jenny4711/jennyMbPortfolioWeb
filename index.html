@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenny Lee - iOS Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Jenny Lee</span>
+                <button id="langBtn" class="lang-btn">한국어</button>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link" data-en="Home" data-ko="홈">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-en="About" data-ko="소개">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link" data-en="Projects" data-ko="프로젝트">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link" data-en="Skills" data-ko="기술">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-en="Contact" data-ko="연락처">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line" data-en="iOS Developer" data-ko="iOS 개발자">iOS Developer</span>
+                    <span class="title-line" data-en="Focused on SwiftUI" data-ko="SwiftUI 전문">Focused on SwiftUI</span>
+                </h1>
+                <p class="hero-subtitle" data-en="Building functional iOS apps with SwiftUI and SwiftData. App Store published developer focused on SwiftUI development with a passion for creating user-friendly applications." data-ko="SwiftUI와 SwiftData로 기능적인 iOS 앱을 개발합니다. App Store에 출시된 앱을 보유한 SwiftUI 개발자로, 사용자 친화적인 애플리케이션 개발에 열정을 가지고 있습니다.">
+                    Building functional iOS apps with SwiftUI and SwiftData. 
+                    App Store published developer focused on SwiftUI development with a passion for creating user-friendly applications.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label" data-en="Apps Published" data-ko="앱 출시">Apps Published</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">43</span>
+                        <span class="stat-label" data-en="Downloads" data-ko="다운로드">Downloads</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label" data-en="Crashes" data-ko="크래시">Crashes</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary" data-en="View My Work" data-ko="작품 보기">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary" data-en="Get In Touch" data-ko="연락하기">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="app-preview">
+                            <img src="image/habbitsLogo.png" alt="Habbits App" class="app-icon">
+                            <span class="app-name">Habbits</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="About Me" data-ko="자기소개">About Me</h2>
+                <p class="section-subtitle" data-en="Passionate iOS developer with App Store experience" data-ko="App Store 경험이 있는 열정적인 iOS 개발자">Passionate iOS developer with App Store experience</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 data-en="Hello, I'm Jenny Lee" data-ko="안녕하세요, 제니 리입니다">Hello, I'm Jenny Lee</h3>
+                    <p data-en="I'm an iOS developer focused on SwiftUI with real App Store launch experience. I've successfully built and published 4 apps using SwiftData persistence, UNUserNotificationCenter notifications, and MVVM architecture patterns." data-ko="저는 실제 App Store 출시 경험이 있는 SwiftUI 전문 iOS 개발자입니다. SwiftData 영속성, UNUserNotificationCenter 알림, MVVM 아키텍처 패턴을 사용하여 4개의 앱을 성공적으로 구축하고 출시했습니다.">
+                        I'm an iOS developer focused on SwiftUI with real App Store launch experience. 
+                        I've successfully built and published 4 apps using SwiftData persistence, 
+                        UNUserNotificationCenter notifications, and MVVM architecture patterns.
+                    </p>
+                    <p data-en="My journey includes shipping mobile apps end-to-end from requirements to TestFlight to App Store submission and updates. I'm passionate about SwiftUI development and continuously learning to create better apps." data-ko="제 여정은 요구사항부터 TestFlight, App Store 제출 및 업데이트까지 모바일 앱을 처음부터 끝까지 출시하는 것을 포함합니다. 저는 SwiftUI 개발과 더 나은 앱을 만들기 위한 지속적인 학습에 열정을 가지고 있습니다.">
+                        My journey includes shipping mobile apps end-to-end from requirements to TestFlight 
+                        to App Store submission and updates. I'm passionate about SwiftUI development 
+                        and continuously learning to create better apps.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span data-en="App Store Published" data-ko="App Store 출시">App Store Published</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-code"></i>
+                            <span data-en="SwiftUI Specialist" data-ko="SwiftUI 전문가">SwiftUI Specialist</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-rocket"></i>
+                            <span data-en="Rapid Learner" data-ko="빠른 학습자">Rapid Learner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="image/myImg.png" alt="Jenny Lee" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Featured Projects" data-ko="주요 프로젝트">Featured Projects</h2>
+                <p class="section-subtitle" data-en="Apps that showcase my iOS development skills" data-ko="제 iOS 개발 기술을 보여주는 앱들">Apps that showcase my iOS development skills</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Habbits Project -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <img src="image/habbitsLogo.png" alt="Habbits Logo" class="project-logo">
+                        <div class="project-info">
+                            <h3 class="project-title">Habbits</h3>
+                            <p class="project-category" data-en="iOS Habit Tracker" data-ko="iOS 습관 추적기">iOS Habit Tracker</p>
+                        </div>
+                        <div class="project-badge" data-en="App Store" data-ko="앱스토어">App Store</div>
+                    </div>
+                    <div class="project-images">
+                        <img src="image/habbitsList.png" alt="Habbits List View" class="project-image">
+                        <img src="image/habbitsDetail.png" alt="Habbits Detail View" class="project-image">
+                        <img src="image/habbitsSetting.png" alt="Habbits Settings" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description" data-en="A beautiful habit tracker built with SwiftUI and SwiftData. Features emoji-based habit management, visual completion tracking, and smart notifications." data-ko="SwiftUI와 SwiftData로 구축된 아름다운 습관 추적기입니다. 이모지 기반 습관 관리, 시각적 완료 추적, 스마트 알림 기능을 제공합니다.">
+                            A beautiful habit tracker built with SwiftUI and SwiftData. Features emoji-based habit management, 
+                            visual completion tracking, and smart notifications.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">SwiftUI</span>
+                            <span class="tech-tag">SwiftData</span>
+                            <span class="tech-tag">UNUserNotificationCenter</span>
+                            <span class="tech-tag">MVVM</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-number">734</span>
+                                <span class="stat-label" data-en="Impressions" data-ko="노출">Impressions</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">33</span>
+                                <span class="stat-label" data-en="Units" data-ko="유닛">Units</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label" data-en="Crashes" data-ko="크래시">Crashes</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://apps.apple.com/us/app/habbits/id674650406" target="_blank" class="project-link">
+                                <i class="fab fa-apple"></i>
+                                <span data-en="App Store" data-ko="앱스토어">App Store</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FaithLog Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <img src="image/faithLogLogo.png" alt="FaithLog Logo" class="project-logo">
+                        <div class="project-info">
+                            <h3 class="project-title">FaithLog</h3>
+                            <p class="project-category">Christian Journaling</p>
+                        </div>
+                        <div class="project-badge">App Store</div>
+                    </div>
+                    <div class="project-images">
+                        <img src="image/faithLogListEN.png" alt="FaithLog List" class="project-image">
+                        <img src="image/faithLogFormEN.png" alt="FaithLog Form" class="project-image">
+                        <img src="image/faithLogFavList.png" alt="FaithLog Favorites" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            An all-in-one Christian app for spiritual journaling with Bible reading, 
+                            ChatGPT-powered chapter summaries, and multi-language support.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">SwiftUI</span>
+                            <span class="tech-tag">SwiftData</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">ChatGPT API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://apps.apple.com/us/app/faithlog/id6673891392" target="_blank" class="project-link">
+                                <i class="fab fa-apple"></i>
+                                App Store
+                            </a>
+                            <a href="https://faithlog.pages.dev" target="_blank" class="project-link">
+                                <i class="fas fa-globe"></i>
+                                Marketing Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daymoji Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <img src="image/daymojiLogo.png" alt="Daymoji Logo" class="project-logo">
+                        <div class="project-info">
+                            <h3 class="project-title">Daymoji</h3>
+                            <p class="project-category">Emoji Journal</p>
+                        </div>
+                        <div class="project-badge">App Store</div>
+                    </div>
+                    <div class="project-images">
+                        <img src="image/daymojiCal.png" alt="Daymoji Calendar" class="project-image">
+                        <img src="image/daymojiCard.png" alt="Daymoji Card" class="project-image">
+                        <img src="image/daymojiSetting.png" alt="Daymoji Settings" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            A minimalist mood & journaling app with emoji-based logging, 
+                            photo/notes, and monthly calendar visualization.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">AsyncStorage</span>
+                            <span class="tech-tag">React Navigation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://apps.apple.com/us/app/daymoji-emoji-journal/id6714449611" target="_blank" class="project-link">
+                                <i class="fab fa-apple"></i>
+                                App Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CookTok Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <img src="image/cooktokLogo.png" alt="CookTok Logo" class="project-logo">
+                        <div class="project-info">
+                            <h3 class="project-title">CookTok</h3>
+                            <p class="project-category">Grocery Management</p>
+                        </div>
+                        <div class="project-badge">Demo</div>
+                    </div>
+                    <div class="project-images">
+                        <img src="image/cooktokList.png" alt="CookTok List" class="project-image">
+                        <img src="image/cooktokForm.png" alt="CookTok Form" class="project-image">
+                        <img src="image/cooktokAiRecipe.png" alt="CookTok AI Recipe" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            Smart grocery management with AI-powered recipe recommendations 
+                            using Google's Gemini AI based on refrigerator inventory.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">AI Integration</span>
+                            <span class="tech-tag">Google Gemini</span>
+                            <span class="tech-tag">Inventory Management</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.youtube.com/shorts/lVpPfzyO9U0" target="_blank" class="project-link">
+                                <i class="fab fa-youtube"></i>
+                                Demo Video
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Technical Skills" data-ko="기술 스택">Technical Skills</h2>
+                <p class="section-subtitle" data-en="Technologies and tools I work with" data-ko="제가 사용하는 기술과 도구들">Technologies and tools I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fab fa-apple"></i>
+                        <span data-en="iOS Development" data-ko="iOS 개발">iOS Development</span>
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Swift</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="30%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SwiftUI</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SwiftData</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="40%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">async/await</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MVVM</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i>
+                        <span data-en="Tools & Technologies" data-ko="도구 및 기술">Tools & Technologies</span>
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Xcode</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Git/GitHub (Basic)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TestFlight</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Firebase</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Instruments</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        <span data-en="Additional Skills" data-ko="추가 기술">Additional Skills</span>
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">React Native</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TypeScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">ChatGPT API</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Get In Touch" data-ko="연락하기">Get In Touch</h2>
+                <p class="section-subtitle" data-en="Let's discuss your next iOS project" data-ko="다음 iOS 프로젝트에 대해 이야기해보세요">Let's discuss your next iOS project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-en="Let's Connect" data-ko="연락해주세요">Let's Connect</h3>
+                    <p data-en="I'm always interested in new opportunities and exciting projects. Whether you have a question about my work or want to discuss a potential collaboration, I'd love to hear from you." data-ko="저는 항상 새로운 기회와 흥미로운 프로젝트에 관심이 있습니다. 제 작업에 대한 질문이 있거나 잠재적인 협업에 대해 논의하고 싶으시다면 언제든 연락해주세요.">
+                        I'm always interested in new opportunities and exciting projects. 
+                        Whether you have a question about my work or want to discuss a potential collaboration, 
+                        I'd love to hear from you.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>jjenny4711l@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/jenny-lee-a61095106/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/jenny4711" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" data-placeholder-en="Your Name" data-placeholder-ko="이름" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" data-placeholder-en="Your Email" data-placeholder-ko="이메일" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" data-placeholder-en="Subject" data-placeholder-ko="제목" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" data-placeholder-en="Your Message" data-placeholder-ko="메시지" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-en="Send Message" data-ko="메시지 보내기">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Jenny Lee. <span data-en="All rights reserved." data-ko="모든 권리 보유.">All rights reserved.</span></p>
+                <p><span data-en="iOS Developer | SwiftUI Expert | App Store Published" data-ko="iOS 개발자 | SwiftUI 전문가 | App Store 출시">iOS Developer | SwiftUI Expert | App Store Published</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
