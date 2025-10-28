@@ -535,6 +535,7 @@ section {
 .project-links {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .project-link {
@@ -563,6 +564,23 @@ section {
 
 .project-card:not(.featured) .project-link:hover {
     background: #1d4ed8;
+}
+
+.appstore-link {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+.appstore-link:hover {
+    background: transparent !important;
+    transform: translateY(-2px);
+    opacity: 0.8;
+}
+
+.appstore-icon {
+    height: 40px;
+    width: auto;
+    display: block;
 }
 
 /* Skills Section */
