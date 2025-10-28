@@ -273,7 +273,7 @@ const heroObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const statNumbers = document.querySelectorAll('.hero-stats .stat-number');
             statNumbers.forEach((stat, index) => {
-                const target = index === 0 ? 4 : index === 1 ? 43 : 0;
+                const target = index === 0 ? 4 : index === 1 ? 61 : 0;
                 setTimeout(() => {
                     animateCounter(stat, target);
                 }, index * 200);
