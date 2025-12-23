@@ -400,6 +400,60 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+// Image lightbox for project screenshots
+(() => {
+    const lightbox = document.getElementById('imageLightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    if (!lightbox || !lightboxImg) return;
+
+    const open = (imgEl) => {
+        const src = imgEl.getAttribute('src');
+        if (!src) return;
+        lightboxImg.src = src;
+        lightboxImg.alt = imgEl.getAttribute('alt') || 'Project screenshot';
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('no-scroll');
+    };
+
+    const close = () => {
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('no-scroll');
+        // clear after animation frame to avoid flash on re-open
+        requestAnimationFrame(() => {
+            lightboxImg.src = '';
+            lightboxImg.alt = '';
+        });
+    };
+
+    // Delegate clicks for all project images
+    document.addEventListener('click', (e) => {
+        const target = e.target;
+        if (!(target instanceof Element)) return;
+
+        const closeEl = target.closest('[data-lightbox-close="true"]');
+        if (closeEl && lightbox.classList.contains('is-open')) {
+            e.preventDefault();
+            close();
+            return;
+        }
+
+        const img = target.closest('.project-image');
+        if (img) {
+            e.preventDefault();
+            open(img);
+        }
+    });
+
+    // ESC closes lightbox as well
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
+            close();
+        }
+    });
+})();
+
 // Performance optimization: Debounce scroll events
 function debounce(func, wait) {
     let timeout;

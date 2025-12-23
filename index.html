@@ -183,6 +183,51 @@
                     </div>
                 </div>
 
+                <!-- Dailyclip Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <img src="image/dp1.png" alt="Dailyclip Logo" class="project-logo">
+                        <div class="project-info">
+                            <h3 class="project-title">Dailyclip</h3>
+                            <p class="project-category" data-en="iOS Video Diary" data-ko="iOS 비디오 다이어리">iOS Video Diary</p>
+                        </div>
+                        <div class="project-badge" data-en="App Store" data-ko="앱스토어">App Store</div>
+                    </div>
+                    <div class="project-images">
+                        <img src="image/dp2.jpg" alt="Dailyclip Calendar" class="project-image">
+                        <img src="image/dp6a.png" alt="Dailyclip Playback" class="project-image">
+                        <img src="image/dp10.png" alt="Dailyclip Promo" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description" data-en="Dailyclip is an iOS video diary app that helps you capture a short photo or video each day, organize moments in a calendar, and automatically generate a single highlight video you can preview, save, and share. I focused on a clean SwiftUI experience and reliable media handling across different video sizes and aspect ratios, shipping iterative builds through TestFlight." data-ko="Dailyclip은 매일 사진이나 짧은 영상을 기록하고, 달력에서 모아보며, 자동으로 하나의 하이라이트 영상으로 만들어 미리보기/저장/공유할 수 있는 iOS 비디오 다이어리 앱입니다. SwiftUI 기반의 깔끔한 UI와 다양한 영상 크기·비율에서도 안정적으로 재생/처리되도록 미디어 처리 안정성에 집중했고, TestFlight로 반복 배포하며 개선했습니다.">
+                            Dailyclip is an iOS video diary app that helps you capture a short photo or video each day, organize moments in a calendar, and automatically generate a single highlight video you can preview, save, and share. I focused on a clean SwiftUI experience and reliable media handling across different video sizes and aspect ratios, shipping iterative builds through TestFlight.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Swift</span>
+                            <span class="tech-tag">SwiftUI</span>
+                            <span class="tech-tag">AVFoundation</span>
+                            <span class="tech-tag">async/await</span>
+                            <span class="tech-tag">MVVM</span>
+                            <span class="tech-tag">SwiftData</span>
+                            <span class="tech-tag">TestFlight</span>
+                            <span class="tech-tag">Instruments</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://apps.apple.com/us/app/dailyclip/id6755399761" target="_blank" class="project-link appstore-link">
+                                <img src="image/appstoreL.png" alt="Download on App Store" class="appstore-icon">
+                            </a>
+                            <a href="https://daily-clip-web-marketing.vercel.app/dailyclip" target="_blank" class="project-link">
+                                <i class="fas fa-globe"></i>
+                                <span data-en="Marketing Site" data-ko="마케팅 사이트">Marketing Site</span>
+                            </a>
+                            <a href="image/previewFixed.mp4" target="_blank" class="project-link">
+                                <i class="fas fa-play"></i>
+                                <span data-en="Preview Video" data-ko="미리보기 영상">Preview Video</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- FaithLog Project -->
                 <div class="project-card">
                     <div class="project-header">
@@ -482,6 +527,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- Image Lightbox (click project screenshots to zoom) -->
+    <div id="imageLightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
+        <div class="lightbox-backdrop" data-lightbox-close="true"></div>
+        <div class="lightbox-content" role="document">
+            <button class="lightbox-close" type="button" aria-label="Close image" data-lightbox-close="true">
+                &times;
+            </button>
+            <img id="lightboxImg" class="lightbox-img" alt="">
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
