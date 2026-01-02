@@ -404,13 +404,59 @@ document.addEventListener('keydown', (e) => {
 (() => {
     const lightbox = document.getElementById('imageLightbox');
     const lightboxImg = document.getElementById('lightboxImg');
-    if (!lightbox || !lightboxImg) return;
+    const lightboxVideo = document.getElementById('lightboxVideo');
+    if (!lightbox || !lightboxImg || !lightboxVideo) return;
 
-    const open = (imgEl) => {
+    const pausePreviews = () => {
+        document.querySelectorAll('.project-video').forEach(v => {
+            try { v.pause(); } catch (_) {}
+        });
+    };
+
+    const resumePreviews = () => {
+        document.querySelectorAll('.project-video[autoplay]').forEach(v => {
+            v.muted = true;
+            const p = v.play();
+            if (p && typeof p.catch === 'function') p.catch(() => {});
+        });
+    };
+
+    const openImage = (imgEl) => {
         const src = imgEl.getAttribute('src');
         if (!src) return;
+        // show image, hide video
+        lightboxVideo.pause();
+        lightboxVideo.removeAttribute('src');
+        lightboxVideo.load();
+        lightboxVideo.style.display = 'none';
+        lightboxImg.style.display = 'block';
         lightboxImg.src = src;
         lightboxImg.alt = imgEl.getAttribute('alt') || 'Project screenshot';
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('no-scroll');
+    };
+
+    const openVideo = (videoEl) => {
+        const srcEl = videoEl.querySelector('source');
+        const src = srcEl?.getAttribute('src') || videoEl.getAttribute('src');
+        if (!src) return;
+
+        pausePreviews();
+
+        // show video, hide image
+        lightboxImg.src = '';
+        lightboxImg.alt = '';
+        lightboxImg.style.display = 'none';
+        lightboxVideo.style.display = 'block';
+
+        lightboxVideo.src = src;
+        lightboxVideo.muted = false;
+        lightboxVideo.volume = 1;
+        lightboxVideo.currentTime = 0;
+        const p = lightboxVideo.play();
+        if (p && typeof p.catch === 'function') p.catch(() => {});
+
         lightbox.classList.add('is-open');
         lightbox.setAttribute('aria-hidden', 'false');
         document.body.classList.add('no-scroll');
@@ -420,11 +466,17 @@ document.addEventListener('keydown', (e) => {
         lightbox.classList.remove('is-open');
         lightbox.setAttribute('aria-hidden', 'true');
         document.body.classList.remove('no-scroll');
+        try { lightboxVideo.pause(); } catch (_) {}
         // clear after animation frame to avoid flash on re-open
         requestAnimationFrame(() => {
             lightboxImg.src = '';
             lightboxImg.alt = '';
+            lightboxImg.style.display = 'block';
+            lightboxVideo.style.display = 'none';
+            lightboxVideo.removeAttribute('src');
+            lightboxVideo.load();
         });
+        resumePreviews();
     };
 
     // Delegate clicks for all project images
@@ -442,7 +494,14 @@ document.addEventListener('keydown', (e) => {
         const img = target.closest('.project-image');
         if (img) {
             e.preventDefault();
-            open(img);
+            openImage(img);
+            return;
+        }
+
+        const vid = target.closest('.project-video');
+        if (vid) {
+            e.preventDefault();
+            openVideo(vid);
         }
     });
 
@@ -453,6 +512,16 @@ document.addEventListener('keydown', (e) => {
         }
     });
 })();
+
+// Best-effort autoplay for muted preview videos (some browsers require JS play() even if autoplay is set)
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.project-video[autoplay]').forEach(v => {
+        v.muted = true;
+        v.playsInline = true;
+        const p = v.play();
+        if (p && typeof p.catch === 'function') p.catch(() => {});
+    });
+});
 
 // Performance optimization: Debounce scroll events
 function debounce(func, wait) {

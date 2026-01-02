@@ -486,12 +486,28 @@ section {
     cursor: zoom-in;
 }
 
+.project-video {
+    width: 120px;
+    height: 200px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    cursor: zoom-in;
+    background: #000;
+    object-fit: cover;
+    transition: transform 0.25s ease;
+}
+
 .project-image:hover {
     transform: scale(1.03);
 }
 
 .project-image {
     transition: transform 0.25s ease;
+}
+
+.project-video:hover {
+    transform: scale(1.03);
 }
 
 /* Lightbox */
@@ -531,6 +547,15 @@ section {
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
     background: #111;
     object-fit: contain;
+}
+
+.lightbox-video {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 14px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+    background: #111;
+    display: none;
 }
 
 .lightbox-close {

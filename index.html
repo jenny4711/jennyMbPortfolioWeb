@@ -197,6 +197,12 @@
                         <img src="image/dp2.jpg" alt="Dailyclip Calendar" class="project-image">
                         <img src="image/dp6a.png" alt="Dailyclip Playback" class="project-image">
                         <img src="image/dp10.png" alt="Dailyclip Promo" class="project-image">
+                        <video class="project-video" autoplay muted loop playsinline preload="metadata" aria-label="Dailyclip promo video 1">
+                            <source src="image/mkVideo1.mp4" type="video/mp4">
+                        </video>
+                        <video class="project-video" autoplay muted loop playsinline preload="metadata" aria-label="Dailyclip promo video 2">
+                            <source src="image/mkVideo2.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <div class="project-content">
                         <p class="project-description" data-en="Dailyclip is an iOS video diary app that helps you capture a short photo or video each day, organize moments in a calendar, and automatically generate a single highlight video you can preview, save, and share. I focused on a clean SwiftUI experience and reliable media handling across different video sizes and aspect ratios, shipping iterative builds through TestFlight." data-ko="Dailyclip은 매일 사진이나 짧은 영상을 기록하고, 달력에서 모아보며, 자동으로 하나의 하이라이트 영상으로 만들어 미리보기/저장/공유할 수 있는 iOS 비디오 다이어리 앱입니다. SwiftUI 기반의 깔끔한 UI와 다양한 영상 크기·비율에서도 안정적으로 재생/처리되도록 미디어 처리 안정성에 집중했고, TestFlight로 반복 배포하며 개선했습니다.">
@@ -222,7 +228,7 @@
                             </a>
                             <a href="image/previewFixed.mp4" target="_blank" class="project-link">
                                 <i class="fas fa-play"></i>
-                                <span data-en="Preview Video" data-ko="미리보기 영상">Preview Video</span>
+                                <span data-en="App Preview" data-ko="앱 미리보기">App Preview</span>
                             </a>
                         </div>
                     </div>
@@ -536,6 +542,7 @@
                 &times;
             </button>
             <img id="lightboxImg" class="lightbox-img" alt="">
+            <video id="lightboxVideo" class="lightbox-video" controls playsinline></video>
         </div>
     </div>
 
