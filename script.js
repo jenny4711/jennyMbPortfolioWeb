@@ -4,7 +4,7 @@ const langBtn = document.getElementById('langBtn');
 
 langBtn.addEventListener('click', () => {
     currentLang = currentLang === 'en' ? 'ko' : 'en';
-    langBtn.textContent = currentLang === 'en' ? '한국어' : 'English';
+    langBtn.textContent = currentLang === 'en' ? 'KR' : 'ENG';
     toggleLanguage();
 });
 
@@ -273,7 +273,7 @@ const heroObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const statNumbers = document.querySelectorAll('.hero-stats .stat-number');
             statNumbers.forEach((stat, index) => {
-                const target = index === 0 ? 4 : index === 1 ? 61 : 0;
+                const target = index === 0 ? 4 : index === 1 ? 110 : 0;
                 setTimeout(() => {
                     animateCounter(stat, target);
                 }, index * 200);
